@@ -1,6 +1,5 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-intervalId = null;
 
 const refs = {
   input: document.querySelector('#datetime-picker'),
@@ -56,6 +55,7 @@ function onBtnClick() {
 }
 
 function reverseTimer() {
+  intervalId = null;
   isActiveReverseTimer = true;
   const chosenDateMs = fp.selectedDates[0].getTime();
   intervalId = setInterval(() => {
