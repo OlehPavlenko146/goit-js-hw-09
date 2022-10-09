@@ -55,7 +55,6 @@ function onBtnClick() {
 }
 
 function reverseTimer() {
-  intervalId = null;
   isActiveReverseTimer = true;
   const chosenDateMs = fp.selectedDates[0].getTime();
   intervalId = setInterval(() => {
