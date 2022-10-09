@@ -57,11 +57,10 @@ function onBtnClick() {
 function reverseTimer() {
   isActiveReverseTimer = true;
   const chosenDateMs = fp.selectedDates[0].getTime();
-  intervalId = setInterval(() => {
+  let intervalId = setInterval(() => {
     const currentDateMs = Date.now();
     const deltaTime = chosenDateMs - currentDateMs;
     if (deltaTime > 0) {
-      console.log(convertMs(deltaTime));
       updateReverseTimerFace(convertMs(deltaTime));
     } else {
       clearInterval(intervalId);
